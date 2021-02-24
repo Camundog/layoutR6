@@ -1,0 +1,277 @@
+$cordefundo:#999;
+$cordaletra: #00cc39;
+$cordestaque: rgb(78, 78, 78);
+ 
+
+body
+{
+    background-color: $cordefundo;
+    color: $cordaletra;
+    font-family: 'Bebas Neue', cursive;
+}
+
+header
+{
+    background-color: $cordestaque;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+  
+}
+
+.logo-header
+{
+    width: 170px;
+    height: 170px;
+    background-image: url('/src/images/73lsgoy7ts621.png');
+    cursor: pointer;
+    transition: all 1s;
+
+    &:hover
+    {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+.conteudo-header
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    ul
+    {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+    
+        li
+        {
+            margin-right: 5px;
+            padding: 10px;
+        }
+        a 
+        {
+            text-decoration: none;
+            color: $cordaletra;
+            font-weight: bold;
+            
+
+            &:hover{
+                color:#70a163;
+                text-shadow: 5px 5px #05972fdc;
+            }
+        }
+    }
+
+    .form-search{
+        display: flex;
+        justify-content: center;
+
+        .search 
+        {
+            height: 35px;
+            width: 200px;
+            border-radius: 10px;
+        }
+        .img-icon
+        {
+            width: 35px;
+            height: 35px;
+        }
+    }
+
+    .menu-mobile
+    {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        display: flex;
+        img 
+        {
+            display: none;
+            cursor: pointer;
+            position: relative;
+            top: 60px;
+            right: 5px;
+        }
+    }
+    .menu-area
+    {
+        width: 0px;
+        height: 300px;
+        color: black;
+        background-color: red;
+    }
+
+}
+
+
+.banner-principal
+{
+    width: 100%;
+    background-image: url('/src/images/R6-Banner_Easy-Resize.com.jpg');
+    background: no-repeat;
+    img{
+        width: 100%;
+    }
+}
+
+.banner-operadores
+{
+    display: flex;
+    margin-top: 10px;
+
+    .operador-1, .operador-2, .operador-3
+    {
+        flex: 1;
+        margin: 15px;
+        background-color: white;
+        background-position: center;
+        height: 500px;
+        transition: all 1s;
+        border-radius: 10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+
+        &:hover
+        {
+            height: 480px;
+        }
+    }
+    .operador-1
+    {
+        background-image: url("/src/images/ela.png");
+    }
+    .operador-2
+    {
+        background-image: url("/src/images/Vigil_R6S.png");
+    }
+    .operador-3
+    {
+        background-image: url("/src/images/Jager_R6S.png");
+    }
+
+    button
+    {
+        cursor: pointer;
+        border: 1px solid #999;
+        border-radius: 15px;
+        font-size: 20px;
+
+        padding: 10px;
+        margin-bottom: 10px;
+
+        font-family:'Bebas Neue', cursive;
+        font-weight: bold;
+
+        transition: all 1s;
+
+        &:hover
+        {
+            background-color: #999;
+        }
+    }
+}
+
+.area-video
+{
+    width: 100%;
+   
+    .conteudo-area-video{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .video
+        {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            padding: 10px;
+        }
+        h1
+        {
+            color: white;
+            text-align: center;
+        }
+    } 
+}
+
+
+footer  
+{
+    height: 200px;
+    width: 100%;
+    background-color:rgb(78, 78, 78);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    p{
+        margin: 10px;
+    }
+}
+
+@media (max-width: 760px) and (min-width: 0px)
+{
+    .conteudo-header
+    {
+        ul 
+        {
+            display: none;
+        }
+         .form-search
+         {
+             display: none;
+         }
+
+         .menu-mobile
+         {
+            img 
+            {
+                display: flex;
+            }
+         }
+         .menu-area
+         {
+             display: flex;
+             flex-direction: column;
+             font-size: 10px;
+
+             .search
+             {
+                margin: 5px;
+
+             }
+           
+         }
+     }
+}
+
+@media (min-width: 0px) and (max-width: 755px)
+{
+    main 
+    {
+        display: flex;
+        flex-direction: column;
+        .banner-operadores
+        {
+            display: flex;
+            flex-direction: column;
+            height: 600px;
+
+          .operador-1
+          {
+              background-position: top;
+          }
+        }
+    }
+}
